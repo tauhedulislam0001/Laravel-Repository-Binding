@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/tauhedulislam0001/Laravel-Repository-Binding" target="_blank">
-        ## Laravel Repository Pattern Tutorial from scratch
+         Laravel Repository Pattern Tutorial from scratch
     </a>
 </p>
 
