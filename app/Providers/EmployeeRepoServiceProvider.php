@@ -13,7 +13,7 @@ class EmployeeRepoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('App\Repositories\Employee\EmployeeInterface.php', 'App\Repositories\Employee\EmployeeRepository.php');
     }
 
     /**
@@ -23,6 +23,6 @@ class EmployeeRepoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind('App\Repositories\Employee\EmployeeInterface.php', 'App\Repositories\Employee\EmployeeRepository.php');
+        //         
     }
 }
