@@ -22,5 +22,5 @@ Ok, now first we will create EmployeeInterface in Employee directory, so first c
 Ok, in this step we will create UserRepository.php for write database login, in this file we will write our database login code. so, first create UserRepository.php file in User directory and put bellow code.
 
 ### app/Repositories/Employee/EmployeeRepository.php
-<img src="/public/screen/EmployeeRepository.png.png" alt="employee interface example code" title="Optional title">
+<img src="/public/screen/EmployeeRepository.png" alt="employee interface example code" title="Optional title">
 
