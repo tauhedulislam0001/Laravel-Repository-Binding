@@ -19,12 +19,12 @@ class EmployeeRepositories implements EmployeeInterface
         return $this->employee->getAll();
     }
 
-    public function createEmployee()
+    public function storeEmployee()
     {
         return $this->employee->create();
     }
 
-    public function editEmployee($id)
+    public function findEmployee($id)
     {
         return $this->employee->edit($id);
     }
