@@ -16,7 +16,7 @@ class EmployeeRepositories implements EmployeeInterface
 
     public function getAll()
     {
-        return $this->employee->index();
+        return $this->employee->getAll();
     }
 
     public function createEmployee()
