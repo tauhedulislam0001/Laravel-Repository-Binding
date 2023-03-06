@@ -12,4 +12,5 @@ class Employee extends Model
     protected $table = "employees";
 
     protected $fillable = ['full_name', 'email', 'position', 'wages', 'mobile', 'status'];
+
 }
