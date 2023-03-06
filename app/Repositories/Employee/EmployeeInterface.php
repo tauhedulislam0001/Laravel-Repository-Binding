@@ -4,12 +4,12 @@ namespace App\Repositories\Employee;
 
 interface EmployeeInterface {
     public function getAll();
-    public function storeEmployee();
-    public function findEmployee($id);
-    public function updateEmployee($id);
-    public function deleteEmployee($id);
-    public function activeEmployee($id);
-    public function inactiveEmployee($id);
+    public function storeEmployee($request);
+    public function findEmployee(int $id);
+    public function updateEmployee(int $id, $data);
+    public function deleteEmployee(int $id);
+    public function activeEmployee(int $id);
+    public function inactiveEmployee(int $id);
 }
 
 

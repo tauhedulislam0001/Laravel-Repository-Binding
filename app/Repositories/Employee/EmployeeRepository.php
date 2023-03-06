@@ -5,7 +5,7 @@ namespace App\Repositories\Employee;
 use App\Repositories\Employee\EmployeeInterface as EmployeeInterface;
 use App\Models\Employee;
 
-class EmployeeRepositories implements EmployeeInterface 
+class EmployeeRepository implements EmployeeInterface 
 {
     public $employee;
     
@@ -16,37 +16,82 @@ class EmployeeRepositories implements EmployeeInterface
 
     public function getAll()
     {
-        return $this->employee->getAll();
+        return Employee::latest()->get();
     }
 
-    public function storeEmployee()
+    public function storeEmployee($data)
     {
-        return $this->employee->create();
+        $newEmployee = new Employee();
+        $newEmployee->full_name = $data->full_name;
+        $newEmployee->position = $data->position;
+        $newEmployee->wages = $data->wages;
+        $newEmployee->email = $data->email;
+        $newEmployee->mobile = $data->mobile;
+        $newEmployee->status = 1;
+        $newEmployee->save();
+        
+        if($newEmployee->save()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
     public function findEmployee($id)
     {
-        return $this->employee->edit($id);
+        $employee = Employee::findOrFail($id);
+        return $employee;
     }
 
-    public function updateEmployee($id)
+    public function updateEmployee($id, $data)
     {
-        return $this->employee->update($id);
+        $updateEmployee = Employee::findOrFail($id);
+        $updateEmployee->full_name = $data->full_name;
+        $updateEmployee->position = $data->position;
+        $updateEmployee->wages = $data->wages;
+        $updateEmployee->email = $data->email;
+        $updateEmployee->mobile = $data->mobile;
+        
+        if($updateEmployee->save()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
     public function deleteEmployee($id)
     {
-        return $this->employee->delete($id);
+        $deleteEmployee = Employee::findOrFail($id);
+        
+        if($deleteEmployee->save()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
     public function activeEmployee($id)
     {
-        return $this->employee->activeStatus($id);
+        $activeEmployee = Employee::findOrFail($id);
+        $activeEmployee->status = 1;
+        
+        if($activeEmployee->save()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
     public function inactiveEmployee($id)
     {
-        return $this->employee->inactiveStatus($id);
+        $inactiveEmployee = Employee::findOrFail($id);
+        $inactiveEmployee->status = 0;
+        
+        if($inactiveEmployee->save()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
 }
