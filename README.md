@@ -15,13 +15,12 @@ In first step we have to create Interface, before create Repositories (app/Repos
 Ok, now first we will create EmployeeInterface in Employee directory, so first create EmployeeInterface.php file and put bellow code in that file:
 
 ### app/Repositories/Employee/EmployeeInterface.php
-
-![employee interface example code](https://github.com/tauhedulislam0001/Laravel-Repository-Binding/public/screen/EmployeeInterface.png?raw=true)
+<img src="/public/screen/EmployeeInterface.png" alt="employee interface example code" title="Optional title">
 
 ## Step 2: Create Repository
 
 Ok, in this step we will create UserRepository.php for write database login, in this file we will write our database login code. so, first create UserRepository.php file in User directory and put bellow code.
 
 ### app/Repositories/Employee/EmployeeRepository.php
-![employee interface example code](https://github.com/tauhedulislam0001/Laravel-Repository-Binding/public/screen/EmployeeRepository.png?raw=true)
+<img src="/public/screen/EmployeeRepository.png.png" alt="employee interface example code" title="Optional title">
 
