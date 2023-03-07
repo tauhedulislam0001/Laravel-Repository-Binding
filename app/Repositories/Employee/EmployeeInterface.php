@@ -12,11 +12,3 @@ interface EmployeeInterface {
     public function inactiveEmployee(int $id);
 }
 
-
-
-
-
-
-
-
-
