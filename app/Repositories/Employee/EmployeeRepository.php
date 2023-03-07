@@ -63,7 +63,7 @@ class EmployeeRepository implements EmployeeInterface
     {
         $deleteEmployee = Employee::findOrFail($id);
         
-        if($deleteEmployee->save()) {
+        if($deleteEmployee->delete()) {
             return 1;
         } else {
             return 0;
