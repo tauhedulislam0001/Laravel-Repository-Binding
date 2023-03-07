@@ -18,12 +18,15 @@ Ok, now first we will create EmployeeInterface in Employee directory, so first c
 
 <img src="/public/screen/employee_interface.png" alt="employee interface example code">
 
+
 ## Step 2: Create Repository
 
 Ok, in this step we will create UserRepository.php for write database login, in this file we will write our database login code. so, first create UserRepository.php file in User directory and put bellow code.
 
 ### app/Repositories/Employee/EmployeeRepository.php
+
 <img src="/public/screen/employee_repository.png" alt="employee repository example code">
+
 
 ## Step 3: Bind Repository In App Service Provider
 Next, we can create Service Provider for Employees, and we can also work with App Service Provider. But It's good if we separate every module's service provider for good practice. Create service provider by this command 
